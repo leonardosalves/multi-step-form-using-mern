@@ -2,11 +2,12 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Form, Button } from "react-bootstrap";
 
-const SecondStep = () =>{
+const SecondStep = (props) =>{
     const { register, handleSubmit, errors } = useForm()
 
     const onSubmit = (data) =>{
         console.log(data)
+        props.history.push('/third')
     }
 
     return(
